@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const path = require("path")
 
 const { connectDB } = require("./config/db");
-const {  userRoute, } = require("./api");
+const {  userRoute } = require("./api/v1");
 
 const app = express();
 
@@ -28,6 +28,6 @@ connectDB().then(() => {
   console.log("Established MongoDB Connection!");
 
   app.listen(process.env.PORT, () => {
-    console.log("Server running in port 2020");
+    console.log("Server running in port 2022");
   });
 });
