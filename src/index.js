@@ -30,14 +30,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/v1/users", (req, res) => {
-  res.send([
-    {
-      id: 1,
-      title: 'Hampura' 
-    }
-  ]);
-});
 connectDB().then(() => {
   console.log("Established MongoDB Connection!");
 
